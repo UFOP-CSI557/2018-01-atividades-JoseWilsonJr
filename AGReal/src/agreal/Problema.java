@@ -10,16 +10,16 @@ package agreal;
  * @author fernando
  */
 public class Problema {
-    
+            
     public void calcularFuncaoObjetivo(Individuo individuo) {
         
-        Double soma = 0.0;
+    	Double rastrigin = 10.0 * individuo.getVariaveis().size();
                 
-        for( Double var : individuo.getVariaveis() ) {
-            soma += Math.pow(var, 2);
+        for( Double var : individuo.getVariaveis()) {
+        	rastrigin += Math.pow(var, 2) - 10.0 * Math.cos(2 * Math.PI * var);
         }
         
-        individuo.setFuncaoObjetivo(soma);
+        individuo.setFuncaoObjetivo(rastrigin);
         
     }
     

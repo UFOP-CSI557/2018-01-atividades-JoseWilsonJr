@@ -19,9 +19,9 @@ public class AGReal {
         Problema problema = new Problema();
 
         Integer tamanho = 50;
-        Double pCrossover = 0.8;
+        Double pCrossover = 0.08;
         Double pMutacao = 0.05;
-        Integer geracoes = 100;
+        Integer geracoes = 300;
         
         Double minimo = -100.0;
         Double maximo = 100.0;
