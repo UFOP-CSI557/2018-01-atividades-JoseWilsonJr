@@ -13,16 +13,16 @@ public class ESTestes {
         Double maximo = 5.12;
         Integer nVariaveis = 100;
         Integer geracoes = 300;
-        Double pMutacao = 0.8;
+        Double pMutacao = 0.0;
 
         // Numero de Execucoes
         int repeticoes = 30;
 
-		Problema problema = new Problema(nVariaveis);
+		Problema problema = new ProblemaRastrigin(nVariaveis);
 		
         // Casos de teste
         // ES-1, ES-2;
-        ArrayList<String> nomes = new ArrayList<>(Arrays.asList("ES-1", "ES-2"));
+        ArrayList<String> nomes = new ArrayList<>(Arrays.asList("ES: 1", "ES: 2"));
         for (int i = 1; i <= repeticoes; i++) {
             ArrayList<Integer> casos = new ArrayList<>(Arrays.asList(1, 2));
             Collections.shuffle(casos);
@@ -34,7 +34,7 @@ public class ESTestes {
             	
             	ESReal esReal;
 
-                Double result = 0.0;
+                Individuo result;
                 long startTime = System.currentTimeMillis();
 
                 int teste = casos.get(c - 1);
@@ -42,15 +42,15 @@ public class ESTestes {
                 switch (teste) {
 
                     case 1:
-                        mu = 100;
+                        mu = 20;
                         lambda = 100;
-                        pMutacao = 0.8;
+                        pMutacao = 0.05;
                         break;
 
                     case 2:
                         mu = 100;
-                        lambda = 1000;
-                        pMutacao = 0.8;
+                        lambda = 200;
+                        pMutacao = 0.019;
                         break;
                         
                 }
@@ -61,13 +61,13 @@ public class ESTestes {
                 long endTime = System.currentTimeMillis();
                 long totalTime = endTime - startTime;
 
+                
                 System.out.println(nomes.get(teste - 1) + ";" + i + ";" + result + ";" + totalTime);
                 System.out.flush();
 
             }
 
         }
-
 
 	}
 

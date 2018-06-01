@@ -11,7 +11,7 @@ package esreal;
  */
 public interface Metodo {
     
-    // Retorna o melhor indiv�duo
+    // Retorna o melhor individuo
     Individuo executar();
     
 }

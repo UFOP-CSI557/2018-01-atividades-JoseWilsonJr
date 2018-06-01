@@ -180,10 +180,10 @@ public class DEReal implements Metodo {
             if (melhorDaPopulacao.getFuncaoObjetivo() <= melhorSolucao.getFuncaoObjetivo()) {
                 melhorSolucao = (IndividuoDouble) melhorDaPopulacao.clone();
             }
-
+/*
             System.out.println("G = " + g + "\t"
                     + melhorSolucao.getFuncaoObjetivo());
-
+*/
         }
 
         return melhorSolucao;

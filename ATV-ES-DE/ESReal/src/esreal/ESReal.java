@@ -89,15 +89,11 @@ public class ESReal implements Metodo {
                     .subList(this.mu, populacao.getIndividuos().size()).clear();
             // Limpar descendentes
             descendentes.getIndividuos().clear();
-            /*
-            System.out.println("G = " + g 
+            
+            /*System.out.println("G = " + g 
                     + "\t"
                     + populacao.getMelhorIndividuo().getFuncaoObjetivo());
-                        
             */
-            
-            
-            
         }
       // Retornar o melhor individuo
       return populacao.getMelhorIndividuo();

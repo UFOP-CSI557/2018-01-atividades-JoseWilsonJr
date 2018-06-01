@@ -14,17 +14,17 @@ import java.util.Random;
  */
 public class IndividuoDouble implements Individuo<Double> {
 
-    // Gen�tipo+Fenotipo
+    // Genetipo+Fenotipo
     private ArrayList<Double> cromossomos;
-    // Custo da fun��o objetivo
+    // Custo da funcao objetivo
     Double funcaoObjetivo;
 
-    // Valor m�nimo
+    // Valor minimo
     Double minimo;
-    // Valor m�ximo
+    // Valor maximo
     Double maximo;
 
-    // N�mero de vari�veis
+    // Numero de variaveis
     Integer nVar;
 
     public IndividuoDouble(Double minimo, Double maximo, Integer nVar) {
@@ -115,7 +115,8 @@ public class IndividuoDouble implements Individuo<Double> {
 
     @Override
     public String toString() {
-        return "Individuo{" + "cromossomos=" + cromossomos + ", funcaoObjetivo=" + funcaoObjetivo + '}';
+    	//return "Individuo{" + "cromossomos=" + cromossomos + ", funcaoObjetivo=" + funcaoObjetivo + '}';
+    	return "" + funcaoObjetivo;
     }
     
 }
